@@ -1,3 +1,6 @@
+// time complexity: O(n)
+// space complexity: O(n)
+
 function fibonacci(n, memo = {}) {
     if (n in memo) return memo[n]
     if (n === 1 || n === 2) return 1;
