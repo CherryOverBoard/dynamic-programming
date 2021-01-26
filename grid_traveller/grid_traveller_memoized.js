@@ -3,7 +3,7 @@ function grid(n, m, memo = {}) {
     if (n === 1 && m === 1) return 1;
 
     let key = getKey(n, m);
-    if (memo[key]) return memo[key];
+    if (key in memo) return memo[key];
 
     memo[key] = grid(n - 1, m, memo) + grid(n, m - 1, memo);
     return memo[key];
