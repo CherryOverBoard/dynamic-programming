@@ -1,13 +1,13 @@
 // time complexity: O(n)
-// space complexity: O(n)
+// space complexity: O(n) - can be optimized by using only two variables
 
 const fibonacci = (n) => {
     const tabulationArray = Array(n + 1).fill(0);
     tabulationArray[1] = 1;
 
     for(let i = 0; i < n; i++) {
-        tabulationArray[i + 1] += tabulationArray[i];
-        tabulationArray[i + 2] += tabulationArray[i];
+        if (i + 1 <= n) tabulationArray[i + 1] += tabulationArray[i];
+        if (i + 2 <= n) tabulationArray[i + 2] += tabulationArray[i];
     }
 
     return tabulationArray[n];
