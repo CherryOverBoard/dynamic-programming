@@ -1,3 +1,6 @@
+// time complexity: O(n^m)
+// space complexity: O(n^m)
+
 function all_construct(target, words) {
     if (target === '') return [[]];
 

@@ -8,9 +8,6 @@ function all_construct(target, words, memo = {}) {
             const newTarget = target.slice(prefix.length);
             const solutions = all_construct(newTarget, words, memo);
             if (solutions !== null) {
-                // if (ret === null) {
-                //     ret = [];
-                // }
                 for(let s of solutions) {
                     ret.push([prefix, ...s]);
                 }

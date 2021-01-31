@@ -1,3 +1,6 @@
+// time complexity: O(n^2 * m)
+// space complexity: O(n^2 + m)
+
 const best_sum = (n, numbers) => {
     const arr = Array(n + 1).fill(null);
     arr[0] = [];
